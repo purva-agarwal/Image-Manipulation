@@ -1,0 +1,102 @@
+# Load the original PNG image from the specified path and name it "testimage"
+load testimage.png testimage
+# Save the loaded image as a PPM file with the name "testimage.ppm"
+save testimage.ppm testimage
+# Brighten the "testimage" by 60 units and save the result with the name "testimage-brighter"
+brighten 60 testimage testimage-brighter
+save bright_testimage.png testimage-brighter
+# Create a vertically flipped version of the "testimage" and save it as "testimage-vertical"
+vertical-flip testimage testimage-vertical
+save testimage_vertical.png testimage-vertical
+# Create a horizontally flipped version of the "testimage-vertical" and save it as "testimage-vertical-horizontal"
+horizontal-flip testimage-vertical testimage-vertical-horizontal
+save testimage-vertical-horizontal-PNG.png testimage-vertical-horizontal
+# Convert the "testimage" to grayscale and save it as "testimage-greyscale"
+greyscale testimage testimage-greyscale
+save testimage-grey.png testimage-greyscale
+# Extract the value component of the "testimage" and save it as "testimage-value-comp"
+value-component testimage testimage-value-comp
+save testimage-value_component.png testimage-value-comp
+# Split the "testimage" into its red, green, and blue components
+rgb-split testimage testimage-red testimage-green testimage-blue
+save testimage-redPNG.png testimage-red
+save testimage-bluePNG.png testimage-blue
+save testimage-greenPNG.png testimage-green
+# Brighten the testimage-red by 50 units
+brighten 50 testimage-red testimage-red
+# Combine the red, green, and blue components into a single image "testimage-red-tinter"
+rgb-combine testimage-red-tinter testimage-red testimage-green testimage-blue
+save red-tint-PNG.png testimage-red-tinter
+# Apply the sepia effect to the "testimage" and save it as "testimage-sepia"
+sepia testimage testimage-sepia
+save sepia-PNG.png testimage-sepia
+# Extract the luma component of the "testimage" and save it as "testimage-luma"
+luma-component testimage testimage-luma
+save lumaComponent.png testimage-luma
+# Extract the intensity component of the "testimage" and save it as "testimage-intensity-component"
+intensity-component testimage testimage-intensity-component
+save intensityComponent.png testimage-intensity-component
+# Extract the red component of the "testimage" and save it as "testimage-red"
+red-component testimage testimage-red
+save red_component.png testimage-red
+# Extract the blue component of the "testimage" and save it as "testimage-blue"
+blue-component testimage testimage-blue
+save blue_component.png testimage-blue
+# Extract the green component of the "testimage" and save it as "testimage-green"
+green-component testimage testimage-green
+save green_component.png testimage-green
+# Apply sharpening to the "testimage" and save it as "testimage-sharp"
+sharpen testimage testimage-sharp
+save sharpPNG.png testimage-sharp
+# Apply a blur effect to the "testimage" and save it as "testimage-blur"
+blur testimage testimage-blur
+save blurPNG.png testimage-blur
+# Apply image darkening
+brighten -60 testimage dark_testimage
+save dark_testimage.png dark_testimage
+# Apply blur on 50% width of the image
+blur testimage testimage_blur_split split 50
+save testimage_blur_split.png testimage_blur_split
+# Apply sharpen on 50% width of the image
+sharpen testimage testimage_sharp_split split 50
+save testimage_sharp_split.png testimage_sharp_split
+# Apply greyscale on 50% width of the image
+greyscale testimage testimage_grey_split split 50
+save testimage_grey_split.png testimage_grey_split
+# Apply sepia on 50% width of the image
+sepia testimage testimage_sepia_split split 50
+save testimage_sepia_split.png testimage_sepia_split
+# Plot a histogram of the testimage image
+histogram testimage testimage_histogram
+save testimage_histogram.png testimage_histogram
+# Apply color-correction on the testimage image
+color-correct testimage_histogram color_correct_testimage
+save color_correct_testimage.png color_correct_testimage
+# Plot the color-corrected testimage image
+histogram color_correct_testimage color_correct_testimage_histogram
+save color_correct_testimage_histogram.png color_correct_testimage_histogram
+# Apply color-correction on 50% of the testimage image
+color-correct testimage color_correct_testimage_split split 50
+save color_correct_testimage_split.png color_correct_testimage_split
+# Plot the histogram of the color-correction on 50% of the testimage image
+histogram color_correct_testimage_split color_correct_testimage_split_histogram
+save color_correct_testimage_split_histogram.png color_correct_testimage_split_histogram
+# Adjust levels of the testimage image
+levels-adjust 20 100 255 testimage level_adjust_testimage
+save level_adjust_testimage.png level_adjust_testimage
+# Plot the level adjusted testimage to a histogram
+histogram level_adjust_testimage level_adjust_testimage_histogram
+save level_adjust_testimage_histogram.png level_adjust_testimage_histogram
+# Apply levels-adjust on 50% of the testimage image
+levels-adjust 20 100 255 testimage levels_adjust_testimage_split split 50
+save levels_adjust_testimage_split.png levels_adjust_testimage_split
+# Plot the histogram of the color-correction on 50% of the testimage image
+histogram levels_adjust_testimage_split levels_adjust_testimage_split_histogram
+save levels_adjust_testimage_split_histogram.png levels_adjust_testimage_split_histogram
+# Compress koala by 90
+load KoalaTest.png koala
+compress 90 koala compressedtestimage90
+save compressed_testimage_90.png compressedtestimage90
+# Compress koala by 60
+compress 60 koala compressedtestimage60
+save compressed_testimage_60.png compressedtestimage60
