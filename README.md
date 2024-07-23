@@ -1,6 +1,5 @@
 # CS5010: Assignment 6
-- Purva Sanjay Agarwal - 002696945
-- Deep Rahul Shah - 002222660
+- Purva Sanjay Agarwal
 
 IME: Image Manipulation and Enhancement
 This README file provides an overview of the Image Processing code and explains its functionality and usage.
