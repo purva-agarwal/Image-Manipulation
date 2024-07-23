@@ -1,6 +1,5 @@
 # Image Processing Application - USEME 
-- Purva Sanjay Agarwal - 002696945
-- Deep Rahul Shah - 002222660
+- Purva Sanjay Agarwal
 
 ## USAGE
 Go to \res folder of the Project and open the command prompt/powershell in that folder.
